@@ -47,28 +47,17 @@ Users should be able to:
 ### Built with
 
 - [React](https://reactjs.org/) - JS library
-- Typescript
+- JavaScript
 - Semantic HTML
-- SASS/SCSS
+- CSS Modules
 - Flexbox
 - CSS Grid
-- Mobile-first workflow
-
-### What I learned
-
-Throughout this project I learned and implemented Typescript and a Dark/Light mode. This was the first time using Typescript in an application and I feel like I adopted it pretty quickly. The Dark/Light mode was also a first for me to use in an application. I chose to control this with dynamic classes that apply the different styles.
-
-### Continued development
-
-I am excited to continue to use Typescript as I feel it is a neccesity with modern development practices. I also plan on continuing to challenge and grow on all my frontend skills to be a better developer.
 
 ### Useful resources
 
 - [React](https://react.dev) - This provides great documentation to assist with your React applications.
-- [Typescript](https://www.typescriptlang.org/) - This also provides great documentation for implementing typescript into your applciations.
+<!-- - [TypeScript](https://www.typescriptlang.org/) - This also provides great documentation for implementing typescript into your applciations. -->
 
 ## Author
 
-- Portfolio - [Nate Valline](https://natevalline.dev)
-- Frontend Mentor - [@nvalline](https://www.frontendmentor.io/profile/nvalline)
-- LinkedIn - [Nate Valline](https://www.linkedin.com/in/nvalline)
+- LinkedIn - [Oyefolu Toyyib](https://www.linkedin.com/in/toyyiboyefolu)
