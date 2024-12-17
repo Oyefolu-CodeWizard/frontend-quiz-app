@@ -3,3 +3,66 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+:root {
+  /* primary */
+  --background-image: url("../src/assets/images/pattern-background-desktop-light.svg");
+  --green: hsl(151, 70%, 50%);
+  --bluish-light: hsl(216, 47%, 78%);
+  --purple: hsl(277, 91%, 56%);
+  --red: hsl(0, 82%, 63%);
+
+  /* neutral */
+  --gray-navy: hsl(219, 13%, 44%);
+  --gray-light: hsl(220, 38%, 97%);
+  --navy: hsl(215, 27%, 32%);
+  --navy-dark: hsl(216, 25%, 25%);
+  --white: hsl(0, 100%, 100%);
+
+  /* accent */
+  --accent-green: hsl(151, 88%, 94%);
+  --accent-blue: hsl(225, 100%, 96%);
+  --accent-purple: hsl(278, 100%, 95%);
+  --accent-red: hsl(22, 100%, 96%);
+
+  /* shadow */
+  --shadow-navy-dark: hsla(216, 25%, 25%, 0.14);
+  --shadow-gray-navy: hsla(220, 29%, 66%, 0.14);
+
+  /* hover */
+  --hover-purple: hsl(277, 91%, 78%);
+}
+
+[data-theme="dark"] {
+  --background-image: url("../src/assets/images/pattern-background-desktop-dark.svg");
+  --gray-light: hsl(216, 25%, 25%);
+  --navy-dark: hsl(0, 100%, 100%);
+  --white: hsl(215, 27%, 32%);
+  --shadow-gray-navy: hsla(216, 25%, 25%, 0.14);
+}
+
+@font-face {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../../src/assets/fonts/Rubik-VariableFont_wght.ttf")
+    format("truetype");
+}
+
+@font-face {
+  font-family: "Rubik";
+  font-style: italic;
+  font-weight: normal;
+  src: url(".../../src/assets/fonts/Rubik-Italic-VariableFont_wght.ttf")
+    format("truetype");
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  background: var(--background-image);
+  background-color: var(--gray-light);
+  background-size: cover;
+  background-position: center;
+  font-family: "Rubik", sans-serif;
+}

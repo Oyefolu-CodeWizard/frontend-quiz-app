@@ -1,0 +1,48 @@
+.startScreen {
+  width: 50%;
+}
+.startScreen button {
+  width: 100%;
+  display: flex;
+  border: none;
+  background-color: var(--white);
+  padding: 10px;
+  border-radius: 10px;
+  margin-top: 1.5rem;
+  box-shadow: 0 16px 40px var();
+}
+.startScreen p {
+  font-family: "Rubik", sans-serif;
+  font-weight: 600;
+  font-size: 1.2rem;
+  margin: 0.7rem 2rem;
+  color: var(--navy-dark);
+}
+.html img {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 4px;
+  background-color: var(--accent-red);
+  padding: 7px;
+}
+.css img {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 4px;
+  background-color: var(--accent-green);
+  padding: 8px;
+}
+.js img {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 4px;
+  background-color: var(--accent-blue);
+  padding: 7px;
+}
+.accessibility img {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 4px;
+  background-color: var(--accent-purple);
+  padding: 7px;
+}
