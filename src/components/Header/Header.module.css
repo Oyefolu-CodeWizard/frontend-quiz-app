@@ -1,20 +1,17 @@
 .header {
   display: flex;
-  justify-content: end;
   padding: 3rem 7rem;
+}
+.justifyBetween {
+  justify-content: space-between;
+}
+.justifyEnd {
+  justify-content: flex-end;
 }
 .title {
   display: flex;
   flex: 1;
 }
-
-.title img {
-  width: 3rem;
-  height: 3rem;
-  border-radius: 3px;
-  background-color: var(--accent-red);
-}
-
 .themeSwitch {
   display: flex;
   margin-right: 10px;

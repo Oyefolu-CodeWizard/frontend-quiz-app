@@ -1,0 +1,21 @@
+.question {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 7rem;
+}
+.questionText {
+  width: 40%;
+  position: relative;
+  /* border: 1px solid red; */
+}
+.questionText p {
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  color: var(--bluish-light);
+  margin-bottom: 3rem;
+}
+.questionText h4 {
+  font-size: 2rem;
+  letter-spacing: 1px;
+  color: var(--navy-dark);
+}

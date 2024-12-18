@@ -1,0 +1,55 @@
+.option {
+  width: 50%;
+}
+.optionButton {
+  width: 100%;
+  display: flex;
+  border: none;
+  background-color: var(--white);
+  padding: 10px;
+  border-radius: 10px;
+  margin-top: 1.5rem;
+  box-shadow: 0 16px 40px var();
+  cursor: pointer;
+  color: var(--navy-dark);
+  font-size: 1.125rem;
+  font-weight: 600;
+  align-items: center;
+}
+.optionIdentifier {
+  background-color: var(--gray-light);
+  color: var(--gray-navy);
+  text-transform: uppercase;
+  border-radius: 5px;
+  padding: 1rem 1.2rem;
+  margin-right: 1rem;
+  font-size: 1rem;
+  font-weight: 700;
+}
+.submit {
+  background-color: var(--purple);
+}
+.answer {
+  border: 3px solid var(--purple);
+}
+.answer .optionIdentifier {
+  background-color: var(--purple);
+  color: hsl(0, 100%, 100%);
+}
+.correct {
+  border: 3px solid var(--green);
+}
+.correct .optionIdentifier {
+  background-color: var(--green);
+  color: hsl(0, 100%, 100%);
+}
+.wrong {
+  border: 3px solid var(--red);
+}
+.wrong .optionIdentifier {
+  background-color: var(--red);
+  color: hsl(0, 100%, 100%);
+}
+.icon {
+  margin-left: 10px;
+}
