@@ -3,7 +3,9 @@
 }
 .optionButton {
   width: 100%;
-  display: flex;
+  display: grid;
+  grid-template-columns: 40px auto 45px;
+  gap: 1.2rem;
   border: none;
   background-color: var(--white);
   padding: 10px;
@@ -15,13 +17,17 @@
   font-size: 1.125rem;
   font-weight: 600;
   align-items: center;
+  text-align: left;
 }
 .optionIdentifier {
   background-color: var(--gray-light);
   color: var(--gray-navy);
   text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border-radius: 5px;
-  padding: 1rem 1.2rem;
+  padding: 1rem 1.5rem;
   margin-right: 1rem;
   font-size: 1rem;
   font-weight: 700;

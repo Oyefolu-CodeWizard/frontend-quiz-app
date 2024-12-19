@@ -23,6 +23,8 @@ function reducer(state, action) {
       return { ...state, index: state.index + 1, answer: null };
     case "newAnswer":
       return { ...state, answer: action.payload };
+    case "finish":
+      return { ...state, status: "finished" };
 
     default:
       throw new Error(`Invalid action ${action.type}`);

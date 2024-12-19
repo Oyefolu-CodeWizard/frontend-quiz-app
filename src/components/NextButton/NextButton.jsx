@@ -1,16 +1,28 @@
 import { useQuiz } from "../../contexts/QuizContext";
 import styles from "./NextButton.module.css";
 
-function NextButton() {
-  const { dispatch } = useQuiz();
-  return (
-    <button
-      className={styles.next}
-      onClick={() => dispatch({ type: "nextQuestion" })}
-    >
-      Next Question
-    </button>
-  );
+function NextButton({ numQuestion }) {
+  const { dispatch, index } = useQuiz();
+
+  if (index < numQuestion - 1)
+    return (
+      <button
+        className={styles.next}
+        onClick={() => dispatch({ type: "nextQuestion" })}
+      >
+        Next Question
+      </button>
+    );
+
+  if (index === numQuestion - 1)
+    return (
+      <button
+        className={styles.next}
+        onClick={() => dispatch({ type: "finish" })}
+      >
+        Finish
+      </button>
+    );
 }
 
 export default NextButton;

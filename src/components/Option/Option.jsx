@@ -6,11 +6,10 @@ import NextButton from "../NextButton/NextButton";
 import Correct from "../../assets/images/icon-correct.svg";
 import Wrong from "../../assets/images/icon-incorrect.svg";
 
-function Option({ question }) {
+function Option({ question, isSubmitted, setIsSubmitted, numQuestion }) {
   const { dispatch, answer } = useQuiz();
-  const [isSubmitted, setIsSubmitted] = useState(false);
   const hasAnswer = answer !== null;
-  const selectedAnswer = question.options[answer];
+  // const selectedAnswer = question.options[answer];
   // const correctAnswer = selectedAnswer === question.answer;
   const correctIndex = question.options.findIndex(
     (option) => option === question.answer
@@ -64,7 +63,11 @@ function Option({ question }) {
         );
       })}
 
-      {!isSubmitted ? <SubmitButton onSubmit={handleSubmit} /> : <NextButton />}
+      {!isSubmitted ? (
+        <SubmitButton onSubmit={handleSubmit} />
+      ) : (
+        <NextButton numQuestion={numQuestion} />
+      )}
     </div>
   );
 }

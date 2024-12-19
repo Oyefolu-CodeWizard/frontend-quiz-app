@@ -1,13 +1,13 @@
 import { useQuiz } from "../../contexts/QuizContext";
 import styles from "./Progress.module.css";
 
-function Progress({ numQuestion }) {
-  const { index, answer } = useQuiz();
+function Progress({ numQuestion, isSubmitted }) {
+  const { index } = useQuiz();
   return (
     <header className={styles.progress}>
       <progress
         max={numQuestion}
-        value={index + 1}
+        value={index + Number(isSubmitted)}
         className={styles.progressBar}
       ></progress>
     </header>
