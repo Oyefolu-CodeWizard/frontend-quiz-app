@@ -9,6 +9,7 @@ import Wrong from "../../assets/images/icon-incorrect.svg";
 function Option({ question, isSubmitted, setIsSubmitted, numQuestion }) {
   const { dispatch, answer } = useQuiz();
   const hasAnswer = answer !== null;
+  const [displayError, setDisplayError] = useState(false);
   // const selectedAnswer = question.options[answer];
   // const correctAnswer = selectedAnswer === question.answer;
   const correctIndex = question.options.findIndex(
@@ -16,14 +17,18 @@ function Option({ question, isSubmitted, setIsSubmitted, numQuestion }) {
   );
 
   function handleSubmit() {
-    if (hasAnswer) {
+    if (!hasAnswer) {
+      setDisplayError(true);
+    } else {
       setIsSubmitted(true);
+      setDisplayError(false);
     }
   }
 
   useEffect(
     function () {
       setIsSubmitted(false);
+      setDisplayError(false);
     },
     [question]
   );
@@ -67,6 +72,13 @@ function Option({ question, isSubmitted, setIsSubmitted, numQuestion }) {
         <SubmitButton onSubmit={handleSubmit} />
       ) : (
         <NextButton numQuestion={numQuestion} />
+      )}
+
+      {displayError && (
+        <div className={styles.error}>
+          <img src={Wrong} alt="WrongIcon" className={styles.icon} />
+          <span>Please select an answer</span>
+        </div>
       )}
     </div>
   );

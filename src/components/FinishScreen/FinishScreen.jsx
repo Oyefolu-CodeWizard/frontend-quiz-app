@@ -1,10 +1,11 @@
 import styles from "./FinishScreen.module.css";
 import iconHTML from "../../assets/images/icon-html.svg";
+import Button from "../Button/Button";
 
 function FinishScreen() {
   return (
     <div className={styles.finish}>
-      <div>
+      <div className={styles.heading}>
         <p>Quiz Completed</p>
         <h2>You scored...</h2>
       </div>
@@ -18,6 +19,7 @@ function FinishScreen() {
           <h1>X</h1>
           <p>out of X</p>
         </div>
+        <button>Play Again</button>
       </div>
     </div>
   );

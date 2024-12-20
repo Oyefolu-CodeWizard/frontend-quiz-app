@@ -59,3 +59,12 @@
 .icon {
   margin-left: 10px;
 }
+.error {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--navy-dark);
+  font-size: 1.3rem;
+  gap: 10px;
+  margin-top: 1.5rem;
+}
