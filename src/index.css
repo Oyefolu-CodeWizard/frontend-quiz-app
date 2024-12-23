@@ -15,6 +15,7 @@
   /* neutral */
   --gray-navy: hsl(219, 13%, 44%);
   --gray-light: hsl(220, 38%, 97%);
+  --light-gray: hsl(220, 38%, 97%);
   --navy: hsl(215, 27%, 32%);
   --navy-dark: hsl(216, 25%, 25%);
   --white: hsl(0, 100%, 100%);
@@ -36,6 +37,7 @@
 [data-theme="dark"] {
   --background-image: url("../src/assets/images/pattern-background-desktop-dark.svg");
   --gray-light: hsl(216, 25%, 25%);
+  --light-gray: hsl(0, 100%, 100%);
   --navy-dark: hsl(0, 100%, 100%);
   --white: hsl(215, 27%, 32%);
   --shadow-gray-navy: hsla(216, 25%, 25%, 0.14);

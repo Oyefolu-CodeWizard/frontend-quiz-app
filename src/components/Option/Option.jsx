@@ -7,9 +7,10 @@ import Correct from "../../assets/images/icon-correct.svg";
 import Wrong from "../../assets/images/icon-incorrect.svg";
 
 function Option({ question, isSubmitted, setIsSubmitted, numQuestion }) {
-  const { dispatch, answer } = useQuiz();
-  const hasAnswer = answer !== null;
+  const { dispatch, answer, index } = useQuiz();
+  const hasAnswer = answer[index] !== null;
   const [displayError, setDisplayError] = useState(false);
+
   // const selectedAnswer = question.options[answer];
   // const correctAnswer = selectedAnswer === question.answer;
   const correctIndex = question.options.findIndex(
@@ -35,10 +36,10 @@ function Option({ question, isSubmitted, setIsSubmitted, numQuestion }) {
 
   return (
     <div className={styles.option}>
-      {question.options.map((option, index) => {
-        const isSelected = answer === index;
-        const isCorrect = isSubmitted && index === correctIndex;
-        const isWrong = isSubmitted && isSelected && index !== correctIndex;
+      {question.options.map((option, i) => {
+        const isSelected = answer[index] === i;
+        const isCorrect = isSubmitted && i === correctIndex;
+        const isWrong = isSubmitted && isSelected && i !== correctIndex;
 
         return (
           <button
@@ -49,13 +50,13 @@ function Option({ question, isSubmitted, setIsSubmitted, numQuestion }) {
             }`}
             value={option}
             onClick={() =>
-              !isSubmitted && dispatch({ type: "newAnswer", payload: index })
+              !isSubmitted && dispatch({ type: "newAnswer", payload: i })
             }
             disabled={isSubmitted}
             key={option}
           >
             <span className={styles.optionIdentifier}>
-              {String.fromCharCode(97 + index)}
+              {String.fromCharCode(97 + i)}
             </span>
             {option}
             {isCorrect && (

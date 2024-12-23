@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes, useNavigate } from "react-router-dom";
 import HomePage from "./pages/HomePage/HomePage";
 import Html from "./pages/HtmlPage/Html";
 import Css from "./pages/CssPage/Css";
@@ -8,6 +8,7 @@ import { useQuiz } from "./contexts/QuizContext";
 
 function App() {
   const { status } = useQuiz();
+
   return (
     <BrowserRouter>
       <Routes>

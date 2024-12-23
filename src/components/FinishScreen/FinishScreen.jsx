@@ -1,8 +1,16 @@
 import styles from "./FinishScreen.module.css";
-import iconHTML from "../../assets/images/icon-html.svg";
-import Button from "../Button/Button";
+import { useQuiz } from "../../contexts/QuizContext";
+import { Link } from "react-router-dom";
 
-function FinishScreen() {
+function FinishScreen({ icon, title, questions, answers, backgroundColor }) {
+  const { dispatch } = useQuiz();
+
+  const score = questions.reduce(
+    (acc, question, index) =>
+      acc + (question.options[answers[index]] === question.answer ? 1 : 0),
+    0
+  );
+
   return (
     <div className={styles.finish}>
       <div className={styles.heading}>
@@ -13,13 +21,21 @@ function FinishScreen() {
       <div className={styles.score}>
         <div className={styles.card}>
           <div className={styles.title}>
-            <img src={iconHTML} alt="iconHTML" />
-            <h2>HTML</h2>
+            <img
+              src={icon}
+              alt={title}
+              style={{ backgroundColor: backgroundColor }}
+            />
+            <h2>{title}</h2>
           </div>
-          <h1>X</h1>
-          <p>out of X</p>
+          <h1>{score}</h1>
+          <p>out of {questions.length}</p>
         </div>
-        <button>Play Again</button>
+        <Link to="/">
+          <button onClick={() => dispatch({ type: "playAgain" })}>
+            Play Again
+          </button>
+        </Link>
       </div>
     </div>
   );

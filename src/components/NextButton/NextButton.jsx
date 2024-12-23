@@ -20,7 +20,7 @@ function NextButton({ numQuestion }) {
         className={styles.next}
         onClick={() => dispatch({ type: "finish" })}
       >
-        Finish
+        Show My Score
       </button>
     );
 }
