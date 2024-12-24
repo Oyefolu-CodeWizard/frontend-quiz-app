@@ -8,7 +8,7 @@ import Wrong from "../../assets/images/icon-incorrect.svg";
 
 function Option({ question, isSubmitted, setIsSubmitted, numQuestion }) {
   const { dispatch, answer, index } = useQuiz();
-  const hasAnswer = answer[index] !== null;
+  const hasAnswer = answer[index] !== undefined;
   const [displayError, setDisplayError] = useState(false);
 
   // const selectedAnswer = question.options[answer];

@@ -1,0 +1,15 @@
+.error {
+  width: 50%;
+  margin: 0 auto;
+  border: none;
+  background-color: var(--white);
+  color: var(--navy-dark);
+  font-size: 1.5rem;
+  letter-spacing: 2;
+  text-align: center;
+  padding: 20px;
+  border-radius: 20px;
+  margin-top: 9rem;
+  box-shadow: 0 16px 40px var();
+  cursor: pointer;
+}
